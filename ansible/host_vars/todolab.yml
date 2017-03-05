@@ -1,0 +1,48 @@
+---
+apt__source_types: [ 'deb', 'deb-src' ]
+apt__distribution_components_free:
+  'Debian':   [ 'main' ]
+  'Raspbian': [ 'main', 'rpi' ]
+  'Ubuntu':   [ 'main', 'restricted', 'universe', 'multiverse' ]
+
+apt__distribution_suffix_map:
+  'Debian_stable':   [ '', '-updates', '-backports' ]
+  'Debian_testing':  [ '', '-updates' ]
+  'Debian_unstable': [ '' ]
+  'Raspbian':        [ '' ]
+  'default':         [ '', '-updates', '-backports', '-security' ]
+
+apt__repositories:
+  - repo: 'ppa:webupd8team/java'
+    distribution: 'Ubuntu'
+
+apt__sources:
+  - uri:          'https://mirrors.ustc.edu.cn/ubuntu/'
+    comment:      '{{ "USTC Mirror " + apt__distribution + " repositories" }}'
+    distribution: 'Ubuntu'
+apt__default_sources: []
+apt__original_sources: []
+apt__security_sources: []
+
+# A timezone (e.g. UTC, Europe/Amsterdam)
+timezone_zone: 'Asia/Shanghai'
+
+# Tomcat versions available
+# 6.0.47
+# 7.0.72
+# 8.0.38
+# 8.5.6
+# 9.0.0.M11
+tomcat_version: '7.0.72'
+
+# Maven version number
+maven_version: '3.3.9'
+
+# Default Node version
+node_version: '7.6.0'
+
+# All Node version to install
+node_versions:
+  - 7.6.0
+
+yarn_global_packages: []

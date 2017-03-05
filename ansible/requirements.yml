@@ -1,0 +1,17 @@
+---
+- src: debops.apt
+  version: v0.4.3
+
+- src: tersmitten.timezone
+  version: v1.0.7
+
+- src: geerlingguy.redis
+  version: 1.4.2
+
+- src: fubarhouse.nodejs
+  version: 1.5.1
+
+- src: fubarhouse.yarn
+
+- src: ocha.yarn
+  version: v1.1.0

@@ -1,0 +1,3 @@
+[todolab]
+todolab  ansible_connection=local
+

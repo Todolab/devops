@@ -1,0 +1,11 @@
+---
+- name: todolab
+  hosts: todolab
+  become: yes
+  roles:
+    - debops.apt
+    - tersmitten.timezone
+    - geerlingguy.redis
+    - fubarhouse.nodejs
+    - { role: fubarhouse.yarn, become: yes, become_user: root }
+    - ocha.yarn
