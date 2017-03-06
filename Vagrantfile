@@ -24,5 +24,11 @@ Vagrant.configure("2") do |config|
     abort "Homestead settings file not found in #{settingsDir}"
   end
 
+  if Vagrant.has_plugin?("vagrant-hostsupdater")
+    config.hostsupdater.aliases = settings['sites'].map { |site| site }
+  end
+
   Todolab.configure(config, settings)
+
+
 end

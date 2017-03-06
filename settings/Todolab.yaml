@@ -11,3 +11,6 @@ provider: virtualbox
 folders:
   - map: ~/Project/Code
     to: /home/ubuntu/Code
+
+sites:
+  - todolab.io
