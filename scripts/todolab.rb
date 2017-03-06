@@ -102,14 +102,13 @@ class Todolab
     end
 
     # Run Ansible from the Vagrant VM
-    # config.vm.provision "ansible_local" do |ansible|
-    #   ansible.playbook = "todolab.yml"
-    #   ansible.provisioning_path = "/vagrant/ansible"
-    #   ansible.inventory_path = "inventory/development"
-    #   ansible.limit = "todolab"
-    #   ansible.verbose = true
-    #   ansible.install = true
-    # end
-
+    config.vm.provision "ansible_local" do |ansible|
+      ansible.playbook = "todolab.yml"
+      ansible.provisioning_path = "/vagrant/ansible"
+      ansible.inventory_path = "inventory/development"
+      ansible.limit = "todolab"
+      ansible.verbose = true
+      ansible.install = true
+    end
   end
 end
