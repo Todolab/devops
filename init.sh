@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-if [ ! -d ".todolab-settings" ]; then
-    mkdir -p ".todolab-settings"
+if [ ! -d ".settings" ]; then
+    mkdir -p ".settings"
 fi
 
-cp -i settings/Todolab.yaml .todolab-settings/Todolab.yaml
+cp -i src/settings/Todolab.yaml .settings/Todolab.yaml
 
 
 echo "Todolab initialized!"
