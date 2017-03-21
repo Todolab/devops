@@ -5,7 +5,6 @@
 
 ### Ansible ###
 *.retry
-ansible/roles
 
 ### Vagrant ###
 .vagrant/
