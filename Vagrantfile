@@ -3,7 +3,7 @@
 
 require 'yaml'
 
-settingsDir = File.expand_path(File.dirname(__FILE__) + '/.todolab-settings')
+settingsDir = File.expand_path(File.dirname(__FILE__) + '/.settings')
 
 TodolabYamlPath = settingsDir + '/Todolab.yaml'
 
