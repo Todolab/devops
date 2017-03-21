@@ -1,0 +1,7 @@
+# test file for locales
+---
+- hosts: localhost
+  connection: local
+  become: true
+  roles:
+    - ../../

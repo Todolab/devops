@@ -52,4 +52,8 @@ node_versions:
   - 7.6.0
   - 7.7.3
 
-yarn_global_packages: []
+mysql_root_password_update: yes
+mysql_packages:
+  - mariadb-client
+  - mariadb-server
+  - python-mysqldb

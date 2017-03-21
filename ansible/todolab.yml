@@ -9,3 +9,4 @@
     - geerlingguy.redis
     - fubarhouse.nodejs
     - ocha.yarn
+    - geerlingguy.mysql
