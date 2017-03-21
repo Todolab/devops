@@ -3,9 +3,9 @@
   hosts: todolab
   become: yes
   roles:
+    - tersmitten.locales
     - debops.apt
     - tersmitten.timezone
     - geerlingguy.redis
     - fubarhouse.nodejs
-    - { role: fubarhouse.yarn, become: yes, become_user: root }
     - ocha.yarn

@@ -1,4 +1,7 @@
 ---
+- src: tersmitten.locales
+  version: v1.0.5
+
 - src: debops.apt
   version: v0.4.3
 
