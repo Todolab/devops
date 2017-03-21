@@ -12,8 +12,8 @@ class Todolab
     # Configure The Box
     config.vm.define settings["name"] ||= "todolab"
     config.vm.box = settings["box"] ||= "ubuntu/xenial64"
-    config.vm.box_version = settings["version"] ||= ">= 20170303.1.0"
     config.vm.box_check_update = settings["box_check_update"]
+    config.vm.box_version = settings["box_version"] ||= ">= 20170303.1.0"
     config.vm.hostname = settings["hostname"] ||= "todolab"
 
     # Configure A Private Network IP

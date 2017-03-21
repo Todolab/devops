@@ -2,6 +2,7 @@
 ip: "192.168.10.10"
 name: "todolab"
 box: "ubuntu/xenial64"
+box_version: "20170303.1.0"
 box_check_update: false
 memory: 2048
 cpus: 1
