@@ -106,7 +106,7 @@ apt__autoremove_suggests: False
 # .. envvar:: apt__base_packages [[[
 #
 # Default base packages to install.
-apt__base_packages: [ 'python-apt', 'apt-transport-https' ]
+apt__base_packages: [ 'python-apt', 'apt-transport-https', 'ca-certificates' ]
 
                                                                    # ]]]
 # .. envvar:: apt__packages [[[
@@ -346,7 +346,7 @@ apt__original_sources:
 # changed.
 apt__default_sources:
 
-  - uri:          'http://httpredir.debian.org/debian'
+  - uri:          'http://deb.debian.org/debian'
     comment:      '{{ "Official " + apt__distribution + " repositories" }}'
     distribution: 'Debian'
 

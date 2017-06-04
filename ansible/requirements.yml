@@ -1,9 +1,9 @@
 ---
 - src: tersmitten.locales
-  version: v1.0.5
+  version: v1.0.8
 
 - src: debops.apt
-  version: v0.4.3
+  version: v0.4.4
 
 - src: tersmitten.timezone
   version: v1.0.7
@@ -12,10 +12,10 @@
   version: 1.4.2
 
 - src: fubarhouse.nodejs
-  version: 1.5.1
-
-- src: ocha.yarn
-  version: v1.1.0
+  version: 1.7.1
 
 - src: geerlingguy.mysql
-  version: 2.5.1
+  version: 2.7.2
+
+- src: jdauphant.nginx
+  version: v2.8

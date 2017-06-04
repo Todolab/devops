@@ -45,12 +45,11 @@ tomcat_version: '7.0.72'
 maven_version: '3.3.9'
 
 # Default Node version
-node_version: '7.7.3'
+node_version: '8.0.0'
 
 # All Node version to install
 node_versions:
-  - 7.6.0
-  - 7.7.3
+  - 8.0.0
 
 mysql_root_password_update: yes
 mysql_packages:

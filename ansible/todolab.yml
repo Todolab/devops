@@ -8,5 +8,5 @@
     - tersmitten.timezone
     - geerlingguy.redis
     - fubarhouse.nodejs
-    - ocha.yarn
+    - jdauphant.nginx
     - geerlingguy.mysql
