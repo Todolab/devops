@@ -23,8 +23,8 @@ apt__repositories:
     distribution: 'Ubuntu'
 
 apt__sources:
-  - uri:          'https://mirrors.ustc.edu.cn/ubuntu/'
-    comment:      '{{ "USTC Mirror " + apt__distribution + " repositories" }}'
+  - uri:          'https://mirrors.tuna.tsinghua.edu.cn/ubuntu/'
+    comment:      '{{ "Tuna Mirror " + apt__distribution + " repositories" }}'
     distribution: 'Ubuntu'
 apt__default_sources: []
 apt__original_sources: []
@@ -44,12 +44,7 @@ tomcat_version: '7.0.72'
 # Maven version number
 maven_version: '3.3.9'
 
-# Default Node version
-node_version: '8.0.0'
-
-# All Node version to install
-node_versions:
-  - 8.0.0
+nodejs_version: "8.x"
 
 mysql_root_password_update: yes
 mysql_packages:

@@ -7,6 +7,6 @@
     - debops.apt
     - tersmitten.timezone
     - geerlingguy.redis
-    - fubarhouse.nodejs
+    - geerlingguy.nodejs
     - jdauphant.nginx
     - geerlingguy.mysql
