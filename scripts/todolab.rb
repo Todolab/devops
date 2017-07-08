@@ -69,6 +69,37 @@ class Todolab
       end
     end
 
+    # Configure The Public Key For SSH Access
+    if settings.include? 'authorize'
+      if File.exists? File.expand_path(settings["authorize"])
+        config.vm.provision "shell" do |s|
+          s.inline = "echo $1 | grep -xq \"$1\" /home/ubuntu/.ssh/authorized_keys || echo \"\n$1\" | tee -a /home/ubuntu/.ssh/authorized_keys"
+          s.args = [File.read(File.expand_path(settings["authorize"]))]
+        end
+      end
+    end
+
+    # Copy The SSH Private Keys To The Box
+    if settings.include? 'keys'
+      if settings["keys"].to_s.length == 0
+        puts "Check your Todolab.yaml file, you have no private key(s) specified."
+        exit
+      end
+      settings["keys"].each do |key|
+        if File.exists? File.expand_path(key)
+          config.vm.provision "shell" do |s|
+            s.privileged = false
+            s.inline = "echo \"$1\" > /home/ubuntu/.ssh/$2 && chmod 600 /home/ubuntu/.ssh/$2"
+            s.args = [File.read(File.expand_path(key)), key.split('/').last]
+          end
+        else
+          puts "Check your Todolab.yaml file, the path to your private key does not exist."
+          exit
+        end
+      end
+    end
+
+
     # Register All Of The Configured Shared Folders
     if settings.include? 'folders'
       settings["folders"].each do |folder|

@@ -9,6 +9,11 @@ cpus: 1
 gui: false
 provider: virtualbox
 
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
 folders:
   - map: ~/Project/Code
     to: /home/ubuntu/Code

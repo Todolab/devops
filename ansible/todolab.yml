@@ -3,8 +3,8 @@
   hosts: todolab
   become: yes
   roles:
-    - tersmitten.locales
     - debops.apt
+    - tersmitten.locales
     - tersmitten.timezone
     - geerlingguy.redis
     - geerlingguy.nodejs
