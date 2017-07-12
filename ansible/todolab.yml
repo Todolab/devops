@@ -5,12 +5,12 @@
   vars_files:
     - vars/config.yml
   roles:
-#    - debops.apt
-#    - geerlingguy.git
+    - debops.apt
+    - geerlingguy.git
     - { role: kosssi.gitconfig, become: no }
-#    - tersmitten.locales
-#    - tersmitten.timezone
-#    - DavidWittman.redis
-#    - fubarhouse.nodejs
-#    - jdauphant.nginx
-#    - geerlingguy.mysql
+    - tersmitten.locales
+    - tersmitten.timezone
+    - DavidWittman.redis
+    - fubarhouse.nodejs
+    - jdauphant.nginx
+    - geerlingguy.mysql
