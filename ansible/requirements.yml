@@ -31,3 +31,6 @@
 
 - src: jdauphant.nginx
   version: v2.8.1
+
+- src: fubarhouse.yarn
+  version: 1.1

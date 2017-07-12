@@ -14,3 +14,4 @@
     - fubarhouse.nodejs
     - jdauphant.nginx
     - geerlingguy.mysql
+    - { role: fubarhouse.yarn, become_user: "{{ ansible_user }}" }
