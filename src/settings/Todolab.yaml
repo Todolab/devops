@@ -20,3 +20,11 @@ folders:
 
 sites:
   - todolab.io
+
+proxy:
+  http: "http://10.0.2.2:4411/"
+  https: "http://10.0.2.2:4411/"
+  no_proxy:
+    - localhost
+    - 127.0.0.1
+
