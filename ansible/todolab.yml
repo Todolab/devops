@@ -4,9 +4,11 @@
   become: yes
   roles:
     - debops.apt
+    - geerlingguy.git
     - tersmitten.locales
     - tersmitten.timezone
-    - geerlingguy.redis
-    - geerlingguy.nodejs
+    - geerlingguy.java
+    - DavidWittman.redis
+    - fubarhouse.nodejs
     - jdauphant.nginx
     - geerlingguy.mysql

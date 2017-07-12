@@ -19,7 +19,56 @@ new release.
 `debops.apt master`_ - unreleased
 ---------------------------------
 
-.. _debops.apt master: https://github.com/debops/ansible-apt/compare/v0.4.4...master
+.. _debops.apt master: https://github.com/debops/ansible-apt/compare/v0.5.0...master
+
+
+`debops.apt v0.5.0`_ - 2017-07-03
+---------------------------------
+
+.. _debops.apt v0.5.0: https://github.com/debops/ansible-apt/compare/v0.4.4...v0.5.0
+
+Added
+~~~~~
+
+- Add the Ansible local fact ``default_sources_map`` which contains a
+  dictionary with distribution name as key containing a list of default sources
+  for each distribution. ``default_mirrors`` is equivalent to
+  ``default_sources_map[apt__distribution]``.  [ypid_]
+
+- Add support for the ARM based BeagleBoard family. Tested with a BeagleBone
+  Black. [ypid_]
+
+- Add support for the `Devuan Jessie <https://devuan.org/>`_ Linux
+  distribution. [evilham]
+
+Changed
+~~~~~~~
+
+- Filter the Ansible local facts ``default_mirrors`` to only provide the
+  default APT mirrors that are relevant to the current OS distribution. This
+  way the list can be used by other Ansible roles for APT mirror information.
+  [drybjed_, ypid_]
+
+- Use debops__tpl_macros.js_ to cleanup redundant code. [ypid_]
+
+- Fix Ansible 2.2 deprecation warnings which requires Ansible 2.2 or higher.
+  Support for older Ansible versions is dropped. [brzhk]
+
+- Update the default variables for Debian Stretch as the new stable release so
+  that backports get enabled for Stretch by default. [ypid_]
+
+Fixed
+~~~~~
+
+- Fix handling of ``option`` and ``options`` from :envvar:`apt__sources` and add
+  missing documentation. [ypid_]
+
+- Properly handle singular and plural options for :envvar:`apt__sources`.
+  Previously certain edge cases might have caused an issue.
+  This has been achieved by cleaning up the templates to map all inputs to the
+  plural variant and eliminating redundant code.
+  Redundancy is the natural enemy of all Ansible role maintainers and should be
+  avoided. [ypid_]
 
 
 `debops.apt v0.4.4`_ - 2017-03-24
@@ -203,7 +252,7 @@ Added
 
 - Added support for both http and https repositories in case of internet proxy.
   Moved ``apt__proxy_url`` to ``apt__http_proxy_url`` and added
-  ``apt__https_proxy_url``. [tallandtree]
+  ``apt__https_proxy_url``. [tallandtree_]
 
 Changed
 ~~~~~~~

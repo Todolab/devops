@@ -19,8 +19,8 @@ apt__distribution_suffix_map:
   'default':         [ '', '-updates', '-backports', '-security' ]
 
 apt__repositories:
-  - repo: 'ppa:webupd8team/java'
-    distribution: 'Ubuntu'
+#  - repo: 'ppa:webupd8team/java'
+#    distribution: 'Ubuntu'
 
 apt__sources:
   - uri:          'https://mirrors.tuna.tsinghua.edu.cn/ubuntu/'
@@ -29,6 +29,10 @@ apt__sources:
 apt__default_sources: []
 apt__original_sources: []
 apt__security_sources: []
+
+git_install_from_source: true
+git_version: "2.13.2"
+git_install_from_source_force_update: true
 
 # A timezone (e.g. UTC, Europe/Amsterdam)
 timezone_zone: 'Asia/Shanghai'
@@ -44,7 +48,12 @@ tomcat_version: '7.0.72'
 # Maven version number
 maven_version: '3.3.9'
 
-nodejs_version: "8.x"
+java_packages:
+  - openjdk-8-jdk
+
+node_version: 8.1.3
+node_versions:
+  - 8.1.3
 
 mysql_root_password_update: yes
 mysql_packages:
