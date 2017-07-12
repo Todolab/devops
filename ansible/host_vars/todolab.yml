@@ -64,6 +64,7 @@ java_packages:
 node_version: 8.1.3
 node_versions:
   - 8.1.3
+node_packages: []
 
 mysql_root_password_update: yes
 mysql_packages:
