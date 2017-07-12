@@ -1,7 +1,0 @@
-# test file for timezone
----
-- hosts: localhost
-  connection: local
-  become: true
-  roles:
-    - ../../
