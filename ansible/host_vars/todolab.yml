@@ -31,8 +31,18 @@ apt__original_sources: []
 apt__security_sources: []
 
 git_install_from_source: true
-git_version: "2.13.2"
+git_version: '2.13.2'
 git_install_from_source_force_update: true
+
+git_config:
+  user:
+    name: "{{ git_user_name }}"
+    email: "{{ git_user_email }}"
+  core:
+    editor: vim
+    excludesfile: '~/.gitexcludesfile'
+  push:
+    default: simple
 
 # A timezone (e.g. UTC, Europe/Amsterdam)
 timezone_zone: 'Asia/Shanghai'

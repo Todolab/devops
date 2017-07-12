@@ -2,13 +2,15 @@
 - name: todolab
   hosts: todolab
   become: yes
+  vars_files:
+    - vars/config.yml
   roles:
-    - debops.apt
-    - geerlingguy.git
-    - tersmitten.locales
-    - tersmitten.timezone
-    - geerlingguy.java
-    - DavidWittman.redis
-    - fubarhouse.nodejs
-    - jdauphant.nginx
-    - geerlingguy.mysql
+#    - debops.apt
+#    - geerlingguy.git
+    - { role: kosssi.gitconfig, become: no }
+#    - tersmitten.locales
+#    - tersmitten.timezone
+#    - DavidWittman.redis
+#    - fubarhouse.nodejs
+#    - jdauphant.nginx
+#    - geerlingguy.mysql
