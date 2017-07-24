@@ -137,7 +137,7 @@ class Todolab
       ansible.playbook = "todolab.yml"
       ansible.provisioning_path = "/vagrant/ansible"
       ansible.inventory_path = "inventory/development"
-      ansible.limit = "todolab"
+      ansible.limit = "todolab-development"
       ansible.verbose = true
       ansible.install = true
       ansible.install_mode = "pip"
