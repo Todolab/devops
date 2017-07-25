@@ -13,5 +13,5 @@
     - DavidWittman.redis
     - fubarhouse.nodejs
     - jdauphant.nginx
-    - Stouts.mongodb
+    - greendayonfire.mongodb
     - { role: fubarhouse.yarn, become_user: "{{ ansible_user }}" }

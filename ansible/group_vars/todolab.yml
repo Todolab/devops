@@ -63,7 +63,7 @@ node_versions:
 node_packages: []
 
 
-mongodb_version: "3.4.6"
+mongodb_version: "3.4"
 
 yarn_global_packages:
   - name: node-gyp
