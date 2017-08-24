@@ -18,9 +18,7 @@ apt__distribution_suffix_map:
   'Raspbian':        [ '' ]
   'default':         [ '', '-updates', '-backports', '-security' ]
 
-apt__repositories:
-  - repo: 'deb [arch=amd64,i386,ppc64el] http://ftp.yz.yamagata-u.ac.jp/pub/dbms/mariadb/repo/10.2/ubuntu xenial main'
-    distribution: 'Ubuntu'
+apt__repositories: []
 
 apt__sources:
   - uri:          'https://mirrors.tuna.tsinghua.edu.cn/ubuntu/'
@@ -34,7 +32,7 @@ apt__keys:
 
 
 git_install_from_source: true
-git_version: '2.13.2'
+git_version: '2.14.1'
 git_install_from_source_force_update: true
 
 
@@ -57,9 +55,9 @@ java_packages:
   - openjdk-8-jdk
 
 
-node_version: 8.2.1
+node_version: 8.4.0
 node_versions:
-  - 8.2.1
+  - 8.4.0
 node_packages: []
 
 
