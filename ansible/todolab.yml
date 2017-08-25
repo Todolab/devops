@@ -8,9 +8,9 @@
     - debops.apt
     - tersmitten.locales
     - tersmitten.timezone
-    - pablocrivella.nvm
-    - ocha.yarn
     - geerlingguy.git
     - { role: kosssi.gitconfig, become: no }
+    - moviedo.nvm
+    - ocha.yarn
     - DavidWittman.redis
     - jdauphant.nginx

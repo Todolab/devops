@@ -55,12 +55,13 @@ java_packages:
   - openjdk-8-jdk
 
 
-nvm_version: v0.33.2
-nvm_global_packages:
-  - node-gyp
-  - adonis-cli
-
-
-mongodb_version: "3.4"
+nvm_version: "v0.33.2"
+nvm_user: "{{ ansible_user }}"
+nvm_node_version: "8.4.0"
+nvm_npm_pkgs:
+ - pkg: "node-gyp"
+   version: "3.6.x"
+ - pkg: "@adonisjs/cli"
+   version: "*"
 
 
