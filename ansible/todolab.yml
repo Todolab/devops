@@ -6,11 +6,11 @@
     - vars/config.yml
   roles:
     - debops.apt
-    - geerlingguy.git
-    - { role: kosssi.gitconfig, become: no }
     - tersmitten.locales
     - tersmitten.timezone
+    - pablocrivella.nvm
+    - ocha.yarn
+    - geerlingguy.git
+    - { role: kosssi.gitconfig, become: no }
     - DavidWittman.redis
-    - fubarhouse.nodejs
     - jdauphant.nginx
-    - fubarhouse.yarn

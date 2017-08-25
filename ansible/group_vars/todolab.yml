@@ -55,18 +55,12 @@ java_packages:
   - openjdk-8-jdk
 
 
-node_version: 8.4.0
-node_versions:
-  - 8.4.0
-node_packages: []
+nvm_version: v0.33.2
+nvm_global_packages:
+  - node-gyp
+  - adonis-cli
 
 
 mongodb_version: "3.4"
-
-yarn_global_packages:
-  - name: node-gyp
-    version: 3.6.2
-    upgrade: true
-
 
 
