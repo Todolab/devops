@@ -18,7 +18,9 @@ apt__distribution_suffix_map:
   'Raspbian':        [ '' ]
   'default':         [ '', '-updates', '-backports', '-security' ]
 
-apt__repositories: []
+apt__repositories:
+  - repo: 'ppa:mysql-ubuntu/mariadb-10.2'
+    distribution: 'Ubuntu'
 
 apt__sources:
   - uri:          'https://mirrors.tuna.tsinghua.edu.cn/ubuntu/'
@@ -27,8 +29,6 @@ apt__sources:
 apt__default_sources: []
 apt__original_sources: []
 apt__security_sources: []
-apt__keys:
-  - keyserver: 'hkp://keyserver.ubuntu.com:80'
 
 
 git_install_from_source: true
@@ -63,5 +63,16 @@ nvm_npm_pkgs:
    version: "3.6.x"
  - pkg: "@adonisjs/cli"
    version: "*"
+
+mysql_root_username: root
+mysql_root_password: ""
+mysql_root_password_update: yes
+mysql_databases:
+  - name: adonis
+
+mysql_packages:
+  - mariadb-client
+  - mariadb-server
+  - python-mysqldb
 
 

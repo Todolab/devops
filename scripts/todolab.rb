@@ -50,7 +50,8 @@ class Todolab
         3306 => 33060,
         5432 => 54320,
         8025 => 8025,
-        27017 => 27017
+        27017 => 27017,
+        3333 => 3333
     }
 
     # Use Default Port Forwarding Unless Overridden
