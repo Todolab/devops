@@ -18,9 +18,7 @@ apt__distribution_suffix_map:
   'Raspbian':        [ '' ]
   'default':         [ '', '-updates', '-backports', '-security' ]
 
-apt__repositories:
-  - repo: 'ppa:mysql-ubuntu/mariadb-10.2'
-    distribution: 'Ubuntu'
+apt__repositories: []
 
 apt__sources:
   - uri:          'https://mirrors.tuna.tsinghua.edu.cn/ubuntu/'
