@@ -73,4 +73,16 @@ mysql_packages:
   - mariadb-server
   - python-mysqldb
 
+todolab_frontend_port: "4455"
+todolab_backend_port: "3333"
+
+nginx_sites:
+  frontend:
+    template: nginx_node.config.j2
+    server_name: local.todolab.io
+    port: "{{ todolab_frontend_port }}"
+  backend:
+    template: nginx_node.config.j2
+    server_name: local.backend.todolab.io
+    port: "{{ todolab_backend_port }}"
 
