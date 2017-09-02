@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
     config.hostmanager.ignore_private_ip = false
     config.hostmanager.include_offline = true
     config.vm.define settings['name'] do |node|
-      node.vm.hostname = settings['name']
+      node.vm.hostname = settings["hostname"] ||= "todolab"
       node.vm.network :private_network, ip: settings['ip']
       node.hostmanager.aliases = settings['sites']
     end
