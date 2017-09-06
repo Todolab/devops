@@ -42,6 +42,7 @@ Vagrant.configure("2") do |config|
 
 
   if Vagrant.has_plugin?("vagrant-proxyconf")
+    config.proxy.enabled = { apt: false }
     config.proxy.http = settings['proxy']['http']
     config.proxy.https = settings['proxy']['https']
     config.proxy.no_proxy = settings['proxy']['no_proxy'].join(',')

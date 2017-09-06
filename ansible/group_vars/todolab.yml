@@ -68,10 +68,6 @@ mysql_root_password_update: yes
 mysql_databases:
   - name: adonis
 
-mysql_packages:
-  - mariadb-client
-  - mariadb-server
-  - python-mysqldb
 
 todolab_frontend_port: "4455"
 todolab_backend_port: "3333"
