@@ -3,6 +3,9 @@ class Todolab
     # Set The VM Provider
     ENV['VAGRANT_DEFAULT_PROVIDER'] = settings["provider"] ||= "virtualbox"
 
+    config.ssh.username = "ubuntu"
+    config.ssh.password = "ubuntu"
+
     # Prevent TTY Errors
     config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
