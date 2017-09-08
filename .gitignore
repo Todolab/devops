@@ -24,4 +24,4 @@ node_modules/
 ### Project ###
 .settings
 ansible/vars/config.yml
-ansible/roles
+ansible/roles_galaxy
