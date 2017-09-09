@@ -61,6 +61,8 @@ nvm_npm_pkgs:
    version: "3.6.x"
  - pkg: "@adonisjs/cli"
    version: "*"
+ - pkg: "pm2"
+   version: "2.x.x"
 
 mysql_root_username: root
 mysql_root_password: ""
