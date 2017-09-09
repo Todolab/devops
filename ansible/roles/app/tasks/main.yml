@@ -1,3 +1,11 @@
 ---
 # tasks file for app
 
+
+- name: Start backend server
+  shell: source ~/.nvm/nvm.sh && pm2 start process.yml
+  args:
+    chdir: /home/ubuntu/Code/Todolab/backend
+    executable: /bin/bash
+  notify:
+    - restart_nginx

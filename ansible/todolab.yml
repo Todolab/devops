@@ -15,4 +15,4 @@
     - geerlingguy.mysql
     - DavidWittman.redis
     - jdauphant.nginx
-    - app
+    - { role: app, become: no, become_user: "{{ ansible_user }}" }
