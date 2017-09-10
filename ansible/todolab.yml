@@ -5,14 +5,14 @@
   vars_files:
     - vars/config.yml
   roles:
-#    - debops.apt
-#    - tersmitten.locales
-#    - tersmitten.timezone
-#    - geerlingguy.git
-#    - { role: kosssi.gitconfig, become: no }
-#    - moviedo.nvm
-#    - ocha.yarn
-#    - geerlingguy.mysql
-#    - DavidWittman.redis
-#    - jdauphant.nginx
-    - { role: app, become: no, become_user: "{{ ansible_user }}" }
+    - debops.apt
+    - tersmitten.locales
+    - tersmitten.timezone
+    - geerlingguy.git
+    - { role: kosssi.gitconfig, become: no }
+    - moviedo.nvm
+    - ocha.yarn
+    - geerlingguy.mysql
+    - DavidWittman.redis
+    - jdauphant.nginx
+    - { role: app, become: no }

@@ -21,3 +21,10 @@
   args:
     chdir: /home/ubuntu/Code/Todolab/backend
     executable: /bin/bash
+
+
+- name: restart nginx
+  command: echo 'restart nginx'
+  notify:
+    - restart nginx
+  become: yes
