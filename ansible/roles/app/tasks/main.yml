@@ -1,27 +1,10 @@
 ---
 # tasks file for app
 
-- name: Generate backend env file
-  template:
-    src: backend.env.j2
-    dest: /home/ubuntu/Code/Todolab/backend/.env
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-    mode: 0644
 
-- name: Generate backend app key
-  shell: source ~/.nvm/nvm.sh && adonis key:generate
-  args:
-    chdir: /home/ubuntu/Code/Todolab/backend
-    executable: /bin/bash
+- include: frontend.yml
 
-
-- name: Start backend server
-  shell: source ~/.nvm/nvm.sh && pm2 start process.yml
-  args:
-    chdir: /home/ubuntu/Code/Todolab/backend
-    executable: /bin/bash
-
+- include: backend.yml
 
 - name: restart nginx
   command: echo 'restart nginx'

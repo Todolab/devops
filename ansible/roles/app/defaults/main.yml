@@ -1,3 +1,9 @@
 ---
 # defaults file for app
 
+# App path
+workspace_path: "/home/{{ ansible_user }}"
+repository_path: "{{ workspace_path }}/Code/Todolab"
+frontend_path: "{{ repository_path }}/frontend"
+backend_path: "{{ repository_path }}/backend"
+

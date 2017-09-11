@@ -1,0 +1,14 @@
+---
+- name: Retrieve repository directory stat
+  stat:
+    path: "{{ repository_path }}"
+  register: repository
+
+- name: Checkout frontend repository
+  git:
+    repo: "git@github.com:Todolab/frontend.git"
+    dest: "{{ repository_path }}"
+    update: no
+  when: not repository.stat.exists
+
+
