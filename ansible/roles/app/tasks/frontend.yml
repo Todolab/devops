@@ -11,4 +11,9 @@
     update: no
   when: not repository.stat.exists
 
+- name: Install npm package
+  shell: "source {{ workspace_path }}/.nvm/nvm.sh && yarn install"
+  args:
+    chdir: "{{ frontend_path }}"
+    executable: /bin/bash
 
