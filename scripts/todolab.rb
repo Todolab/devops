@@ -9,11 +9,6 @@ class Todolab
     # Allow SSH Agent Forward from The Box
     config.ssh.forward_agent = true
 
-    # Change Insecure Key To My Own Key On Vagrant
-    config.ssh.insert_key = false
-    config.ssh.private_key_path = ["~/.ssh/id_rsa", "~/.vagrant.d/insecure_private_key"]
-    config.vm.provision "file", source: "~/.ssh/id_rsa.pub", destination: "~/.ssh/authorized_keys"
-
     # Configure The Box
     config.vm.define settings["name"] ||= "todolab"
     config.vm.box = settings["box"] ||= "ubuntu/xenial64"
