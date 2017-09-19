@@ -31,6 +31,11 @@
     chdir: "{{ backend_path }}"
     executable: /bin/bash
 
+- name: Build database from migration file
+  shell: "source {{ workspace_path }}/.nvm/nvm.sh && adonis migration:run"
+  args:
+    chdir: "{{ backend_path }}"
+    executable: /bin/bash
 
 - name: Start backend server
   shell: "source {{ workspace_path }}/.nvm/nvm.sh && pm2 start process.yml"
