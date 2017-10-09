@@ -17,3 +17,10 @@
     chdir: "{{ frontend_path }}"
     executable: /bin/bash
 
+- name: Start frontend server
+  shell: "source {{ workspace_path }}/.nvm/nvm.sh && pm2 start process.yml"
+  args:
+    chdir: "{{ frontend_path }}"
+    executable: /bin/bash
+
+

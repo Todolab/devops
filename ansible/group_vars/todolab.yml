@@ -71,7 +71,7 @@ mysql_databases:
   - name: adonis
 
 
-todolab_frontend_port: "4455"
+todolab_frontend_port: "3000"
 todolab_backend_port: "3333"
 
 nginx_sites:
