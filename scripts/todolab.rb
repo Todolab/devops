@@ -142,7 +142,7 @@ class Todolab
       ansible.verbose = true
       ansible.install = true
       ansible.install_mode = "pip"
-      ansible.version = "2.3.1.0"
+      ansible.version = "2.4.0.0"
     end
   end
 end
