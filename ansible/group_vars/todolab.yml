@@ -55,7 +55,7 @@ java_packages:
 
 nvm_version: "v0.33.2"
 nvm_user: "{{ ansible_user }}"
-nvm_node_version: "8.4.0"
+nvm_node_version: "8.7.0"
 nvm_npm_pkgs:
  - pkg: "node-gyp"
    version: "3.6.x"
@@ -69,6 +69,8 @@ mysql_root_password: ""
 mysql_root_password_update: yes
 mysql_databases:
   - name: adonis
+mysql_config_include_files:
+  - { src: custom-my.cnf, force: yes }
 
 
 todolab_frontend_port: "3000"
